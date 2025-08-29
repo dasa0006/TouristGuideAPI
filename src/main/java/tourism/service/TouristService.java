@@ -27,8 +27,8 @@ public class TouristService {
         repository.addOneNamedAttractionToList(touristAttraction);
     }
 
-    public void updateAttraction(String currentName,TouristAttraction touristAttraction) {
-        repository.updateOneNamedAttraction(currentName, touristAttraction);
+    public void updateAttraction(TouristAttraction touristAttraction) {
+        repository.updateOneNamedAttraction(touristAttraction);
     }
 
     public void deleteAttraction(String name) {

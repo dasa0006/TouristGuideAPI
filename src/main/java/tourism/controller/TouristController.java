@@ -40,9 +40,9 @@ public class TouristController {
     }
 
     // POST /attractions/update
-    @PostMapping("/update/{currentName}")
-    public ResponseEntity<TouristAttraction> updateAttraction(@PathVariable String currentName,@RequestBody TouristAttraction touristAttraction) {
-        service.updateAttraction(currentName, touristAttraction);
+    @PostMapping("/update")
+    public ResponseEntity<TouristAttraction> updateAttraction(@RequestBody TouristAttraction touristAttraction) {
+        service.updateAttraction(touristAttraction);
         return ResponseEntity.ok(touristAttraction);
     }
 

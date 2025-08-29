@@ -56,15 +56,14 @@ public class TouristRepository {
         attractions.add(touristAttraction);
     }
 
-    public void updateOneNamedAttraction(String currentAttractionName,TouristAttraction touristAttraction) {
+    public void updateOneNamedAttraction(TouristAttraction touristAttraction) {
         for (int i = 0; i < attractions.size(); i++) {
             TouristAttraction attraction = attractions.get(i);
-            if (attraction.getName().equals(currentAttractionName)) {
+            if (attraction.getName().equals(touristAttraction.getName())) {
                 attractions.set(i, touristAttraction); // replace old object with updated one
                 break; // stop after first match
             }
         }
-
     }
 
     public void deleteOneNamedAttractionFromList(String namedAttractionToRemove) {
